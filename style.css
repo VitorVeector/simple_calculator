@@ -1,0 +1,56 @@
+/*  ----- GLOBAL -----*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+}
+
+html {
+    font-size: 93.75%;
+}
+
+body{
+    background-color: #386150;
+}
+
+#title{
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+#title:hover{
+    color: #242424;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#calculadora{
+    width: 300px;
+    height: 300px;
+    background-color: #1d1d1d;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#output {
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    
+}
+
