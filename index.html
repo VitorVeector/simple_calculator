@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
 </head>
@@ -19,36 +19,42 @@
     <main>
         <div id="calculadora">
             <div id="output">
-                <p>0</p>
+
             </div>
             <div id="buttons">
                 <table>
                     <thead>
                         <tr>
-                            <th><button soma><img src="./assets/soma.svg" alt="soma"></button></th>
-                            <th><button sub><img src="./assets/subtração.svg" alt="subtracão"></button></th>
-                            <th><button mult><img src="./assets/multiplicacao.svg" alt="multiplicação"></button></th>
-                            <th><button div><img src="./assets/division.svg" alt="divisão"></button></th>
+                            <th><button class="button" id="soma" onclick="insert('+')"><p>+</p></button></th>
+                            <th><button class="button" id="sub" onclick="insert('-')"><p>-</p></button></th>
+                            <th><button class="button" id="mult" onclick="insert('*')"><p>x</p></button></th>
+                            <th><button class="button" id="div" onclick="insert('/')"><p>÷</p></button></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><button id="7">7</button></td>
-                            <td><button id="8">8</button></td>
-                            <td><button id="9">9</button></td>
-                            <td><button>C</button></td>
+                            <td><button class="button" id="seven" onclick="insert('7')">7</button></td>
+                            <td><button class="button"  id="eight" onclick="insert('8')">8</button></td>
+                            <td><button class="button"  id="nine" onclick="insert('9')">9</button></td>
+                            <td><button class="button" id="btnClear" onclick="clean()">C</button></td>
                         </tr>
                         <tr>
-                            <td><button id="4">4</button></td>
-                            <td><button id="5">5</button></td>
-                            <td><button id="6">6</button></td>
+                            <td><button class="button" id="four" onclick="insert('4')">4</button></td>
+                            <td><button class="button" id="five" onclick="insert('5')">5</button></td>
+                            <td><button class="button" id="six" onclick="insert('6')">6</button></td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td><button id="1">1</button></td>
-                            <td><button id="2">2</button></td>
-                            <td><button id="3">3</button></td>
+                            <td><button class="button" id="one" onclick="insert('1')">1</button></td>
+                            <td><button class="button" id="two" onclick="insert('2')">2</button></td>
+                            <td><button class="button" id="three" onclick="insert('3')">3</button></td>
                             <td></td>
+                        </tr>
+                        <tr>
+                            <td><button class="button" id="zero">0</button></td>
+                            <td><button class="button" id="point" onclick="insert('.')">.</button></td>
+                            <td></td>
+                            <td><button class="button" id="equal" colspan="3" onclick="calc()">=</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -62,5 +68,6 @@
         </div>
     </main>
 </body>
+<script src="./scrpit.js"></script>
 
 </html>

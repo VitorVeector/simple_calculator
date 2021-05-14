@@ -7,7 +7,11 @@
 }
 
 :root{
-
+    --light-gray: #e9e9e9;
+    --gray: #555555;
+    --dark-gray: #363636;
+    --dark-yellow: #7a7526;
+    --yellow-js: #f0ff20;
 }
 
 html {
@@ -15,11 +19,11 @@ html {
 }
 
 body{
-    background-color: #386150;
+    background-color: var(--light-gray);
 }
 
 #title{
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Montserrat', monospace;
     text-align: center;
     margin-top: 30px;
     text-transform: uppercase;
@@ -31,26 +35,127 @@ body{
 
 main{
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 #calculadora{
     width: 300px;
-    height: 300px;
-    background-color: #1d1d1d;
+    height: 350px;
+    background-color: var(--yellow-js);
     padding: 30px;
     border-radius: 10px;
 }
 
 #output {
-    background-color: #ddd;
-    padding: 10px;
+    background-color: var(--dark-gray);
+    color: #eeeeee;
+    width: 240px;
+    height: 30px;
     border-radius: 5px;
     text-align: right;
-    
+    font-family: 'Montserrat', monospace;
+    font-weight: 900;
+    padding: 6px 4px 0 0;
 }
 
+
+
+#soma, #div, #mult, #sub{
+    margin: 5px 0 0 6px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--dark-gray);
+    border-style: none;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+#soma:hover{
+    background-color: var(--dark-yellow)
+}
+#div:hover{
+    background-color: var(--dark-yellow)
+}
+#mult:hover{
+    background-color: var(--dark-yellow)
+}
+#sub:hover{
+    background-color: var(--dark-yellow);
+}
+
+#soma p:hover{
+    transform: rotate(90deg) scale(1.3);
+   
+    transition-duration: 1s;  
+}
+#sub p:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;  
+}
+#mult p:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;  
+}
+#div p:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;  
+}
+
+tbody{
+    text-align: center;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 6px;
+    font-family: 'Montserrat', monospace;
+    font-weight: bold;
+    background-color: var(--dark-gray);
+    color: var(--light-gray);
+    border-style: none;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+button:hover{
+    background-color: var(--dark-yellow);
+}
+
+#zero {
+    position: absolute;
+    font-size: 25px;
+    text-align: center;
+    width: 108px;
+    margin-left: -22px;
+}
+
+#point {
+    position: absolute;
+    margin-left: 36px;
+
+}
+
+#btnClear{
+    font-size: 20px;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: -22px;
+    height: 102px;
+}
+
+#equal{
+    position: absolute;
+    font-size: 25px;
+    height: 103px;
+    margin-top: -52px;
+    margin-left: -22px;
+    background-color: var(--gray)
+}
+
+#equal:hover{
+    border: solid 3px rgb(153, 153, 153);
+}
